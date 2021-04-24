@@ -771,6 +771,13 @@ export interface Schedule {
    * @since 1.0.0
    */
   count?: number;
+  
+  /**
+   * Schedule a notification on a particular type.
+   *
+   * @since 1.0.0
+   */
+  type?: ScheduleType;
 }
 
 export interface ScheduleOn {
@@ -791,6 +798,10 @@ export type ScheduleEvery =
   | 'hour'
   | 'minute'
   | 'second';
+
+export type ScheduleType =
+  | 'RTC_WAKEUP'
+  | 'RTC';
 
 export interface ListChannelsResult {
   /**
